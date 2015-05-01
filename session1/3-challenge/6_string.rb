@@ -6,5 +6,12 @@
 #
 
 def odds_and_evens(string, return_odds)
-
+  newstring = ''
+  number = string.length
+  number.times do |index|
+    next if return_odds && index.even?
+    next if !return_odds && index.odd?
+    newstring += string[index]
+  end
+  newstring
 end
